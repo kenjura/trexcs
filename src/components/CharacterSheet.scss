@@ -1,11 +1,12 @@
 .character-sheet {
     display: grid;
-    grid-template-columns: 10px 1fr 10px 1fr 10px;
+    grid-template-columns: 20px 1fr 20px 1fr 20px;
+    grid-template-rows: 1fr;
 
     section {
         background-color: rgba(255,255,255,0.2);
-        display: inline-block;
-        margin-bottom: 10px;
+        display: block;
+        margin-bottom: 20px;
         padding: 10px;
 
         header {
@@ -31,8 +32,10 @@
 
     .grid-left {
         grid-column: 2;
+        grid-row: 1;
     }
     .grid-right {
         grid-column: 4;
+        grid-row: 1;
     }
 }
