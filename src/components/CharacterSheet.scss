@@ -1,0 +1,38 @@
+.character-sheet {
+    display: grid;
+    grid-template-columns: 10px 1fr 10px 1fr 10px;
+
+    section {
+        background-color: rgba(255,255,255,0.2);
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 10px;
+
+        header {
+            font-size: 125%;
+            border-bottom: 5px solid #282c34;
+            margin: 0 -10px 10px -10px;
+            padding: 0px 0 10px 0;
+            text-align: center;
+        }
+
+        ul {
+            display: inline-block;
+            margin: 0;
+            padding: 0 0 0 22px;
+        }
+
+        table {
+            th, td {
+                text-align: left;
+            }
+        }
+    }
+
+    .grid-left {
+        grid-column: 2;
+    }
+    .grid-right {
+        grid-column: 4;
+    }
+}

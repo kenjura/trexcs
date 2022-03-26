@@ -1,0 +1,1 @@
+For now, there is nothing valuable here. Do not use this code. All rights reserved by author. Will likely delete soon.
