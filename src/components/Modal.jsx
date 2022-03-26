@@ -6,10 +6,10 @@ export default function Modal({ children, isShown, onClose, title }) {
         onClose();
     }
 
-    return <div class="modal" is-shown={isShown.toString()}>
-        <div class="modal-background" onClick={onClickModal}></div>
-        <div class="modal-foreground">
-            <div class="modal-title">{title}</div>
+    return <div className="modal" is-shown={isShown.toString()}>
+        <div className="modal-background" onClick={onClickModal}></div>
+        <div className="modal-foreground">
+            <div className="modal-title">{title}</div>
             {children}
         </div>
     </div>

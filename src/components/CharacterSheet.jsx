@@ -21,40 +21,44 @@ export default function CharacterSheet() {
         setIsAddFeatModalShown(false);
     }
 
-    return <div class="character-sheet">
-        <div class="grid-left">
+    return <div className="character-sheet">
+        <div className="grid-left">
             <section>
                 <header>Basics</header>
 
                 <table>
-                    <tr>
-                        <th>Name</th>
-                        <td>Beryl</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <td>Beryl</td>
+                        </tr>
 
-                    <tr>
-                        <th>Level</th>
-                        <td>10</td>
-                    </tr>
+                        <tr>
+                            <th>Level</th>
+                            <td>10</td>
+                        </tr>
 
-                    <tr>
-                        <th>Classes</th>
-                        <td>Psion 10</td>
-                    </tr>
+                        <tr>
+                            <th>Classes</th>
+                            <td>Psion 10</td>
+                        </tr>
+                    </tbody>
                 </table>
 
             </section>
             <section>
                 <header>Classes</header>
                 <table>
-                    <tr>
-                        <th>Level</th>
-                        <th>Class</th>
-                    </tr>
-                    <tr>
-                        <td>1-10</td>
-                        <td>Psion</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <th>Level</th>
+                            <th>Class</th>
+                        </tr>
+                        <tr>
+                            <td>1-10</td>
+                            <td>Psion</td>
+                        </tr>
+                    </tbody>
                 </table>
             </section>
             <section>
@@ -78,7 +82,7 @@ export default function CharacterSheet() {
                 </Modal>
             </section>
         </div>
-        <div class="grid-right">
+        <div className="grid-right">
             <section>
                 <header>Ability Scores</header>
                 <p>TBD</p>
