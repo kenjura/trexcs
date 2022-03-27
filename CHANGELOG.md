@@ -7,3 +7,9 @@
 - Added ChatWindow
 - Added character object as YML (and yaml parser)
 - Added CHANGELOG and TODO
+
+## Update 2
+- Implemented Skills section
+- Chat window now scrolls automatically
+- Added formatModifier helper, RollableValue now using it
+- Fixed bug: RollableValue not sending timestamp

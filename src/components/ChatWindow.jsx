@@ -1,7 +1,7 @@
 import { chatHistory } from '../state/chatHistory';
 import { userState } from '../state/user';
 import { useRecoilState } from 'recoil';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import './ChatWindow.scss';
 
@@ -15,10 +15,20 @@ export default function ChatWindow() {
         setHistory(newHistory);
     };
 
+    const historyWindowRef = useRef();
+    useEffect(() => {
+        const options = {
+            top: historyWindowRef.current.scrollHeight,
+            behavior: 'smooth',
+        };
+        historyWindowRef.current.scroll(options);
+    },[history]);
+
+
     return <div className="chat-window">
-        <div className="chat-window-history">
+        <div className="chat-window-history" ref={historyWindowRef}>
             {history.map(message => <ChatMessage
-                key={message.user.name+message.text} 
+                key={message.user.name+message.timestamp} 
                 user={message.user} 
                 text={message.text}
                 timestamp={message.timestamp}

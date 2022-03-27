@@ -1,4 +1,5 @@
 import AbilityScores from './sections/AbilityScores';
+import Skills from './sections/Skills';
 import Feat from './Feat';
 import Modal from './Modal';
 
@@ -83,14 +84,7 @@ export default function CharacterSheet({ character }) {
         </div>
         <div className="grid-right">
             <AbilityScores attributes={character.attributes} level={character.level} />
-            <section>
-                <header>Attributes</header>
-                <p>TBD</p>
-            </section>
-            <section>
-                <header>Skills</header>
-                <p>TBD</p>
-            </section>
+            <Skills attributes={character.attributes} skills={character.skills} level={character.level} />
         </div>
 
 

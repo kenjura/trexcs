@@ -54,5 +54,9 @@ feats:
   - name: Aim
 skills:
   - name: Acrobatics
+    attribute: Dexterity
     points: 12
+  - name: Athletics
+    attribute: Strength
+    points: 8
 `

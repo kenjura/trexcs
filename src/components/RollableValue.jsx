@@ -12,7 +12,7 @@ export default function RollableValue({ diceExpression='1d20+5', label }) {
         const result = rollExpression(diceExpression);
         const message = `Rolled ${diceExpression}. Got ${result.expressionWithRolls} = ${result.finalValue}`;
         const oldHistory = history;
-        const newHistory = [...history, { user, text:message }];
+        const newHistory = [...history, { user, text:message, timestamp:Date.now() }];
         setHistory(newHistory);
     }
 
