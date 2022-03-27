@@ -1,0 +1,7 @@
+.rollable-value {
+    color: var(--link-color);
+    cursor: pointer;
+}
+.rollable-value:hover {
+    filter: brightness(0.5);
+}

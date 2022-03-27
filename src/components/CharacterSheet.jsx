@@ -1,3 +1,4 @@
+import AbilityScores from './sections/AbilityScores';
 import Feat from './Feat';
 import Modal from './Modal';
 
@@ -6,7 +7,7 @@ import './CharacterSheet.scss';
 import { getAll, getOne } from '../data/feats';
 import { useState } from 'react';
 
-export default function CharacterSheet() {
+export default function CharacterSheet({ character }) {
 
     const [ isAddFeatModalShown, setIsAddFeatModalShown ] = useState(false);
     const [ feats, setFeats ] = useState([]);
@@ -30,12 +31,12 @@ export default function CharacterSheet() {
                     <tbody>
                         <tr>
                             <th>Name</th>
-                            <td>Beryl</td>
+                            <td>{ character.name }</td>
                         </tr>
 
                         <tr>
                             <th>Level</th>
-                            <td>10</td>
+                            <td>{ character.level }</td>
                         </tr>
 
                         <tr>
@@ -81,10 +82,7 @@ export default function CharacterSheet() {
             </section>
         </div>
         <div className="grid-right">
-            <section>
-                <header>Ability Scores</header>
-                <p>TBD</p>
-            </section>
+            <AbilityScores attributes={character.attributes} level={character.level} />
             <section>
                 <header>Attributes</header>
                 <p>TBD</p>

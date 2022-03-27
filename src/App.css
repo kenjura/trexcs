@@ -7,6 +7,14 @@ body {
 .App {
 }
 
+:root {
+  --link-color: #6191ef;
+}
+
+a {
+  color: var(--link-color);
+}
+
 .App-header {
   /* min-height: 100vh; */
   display: flex;

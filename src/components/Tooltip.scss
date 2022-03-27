@@ -7,7 +7,9 @@
 		display: none;
 		padding: 5px;
 		position: absolute;
-		top: -30px;
+		bottom: 100%;
+		z-index: 30101;
+		min-width: 10em;
 	}
 }
 
