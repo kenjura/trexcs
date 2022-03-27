@@ -3,14 +3,15 @@ import './Feat.scss';
 import Tooltip from './Tooltip';
 
 import { useState } from 'react';
-import { getOne } from '../data/feats';
+import { getSystem } from '../data/system';
 
 export default function Feat({ name }) {
 	const [ desc, setDesc ] = useState('');
 
 	const onMouseEnter = async () => {
-		const [,,,desc] = await getOne(name);
-		setDesc(desc);
+		const {feats} = getSystem();
+		const {description} = feats.find(feat => feat.name === name);
+		setDesc(description);
 	}
 
 	return <Tooltip text={desc}>

@@ -5,7 +5,7 @@ import Modal from './Modal';
 
 import './CharacterSheet.scss';
 
-import { getAll, getOne } from '../data/feats';
+import { getSystem } from '../data/system';
 import { useState } from 'react';
 
 export default function CharacterSheet({ character }) {
@@ -14,7 +14,7 @@ export default function CharacterSheet({ character }) {
     const [ feats, setFeats ] = useState([]);
 
     const onAddFeat = async () => {        
-        const feats = await getAll();
+        const {feats} = getSystem();
         setFeats(feats);
 
         setIsAddFeatModalShown(true);

@@ -1,4 +1,4 @@
-export const feats = `
+export const featsYml = `
 feats:
   - name: Dodge
     level: 1
