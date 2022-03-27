@@ -1,10 +1,15 @@
+import yaml from 'js-yaml';
+import { feats as featsYml } from './fixtures/feats.yml.js';
+
 const cache = '';
 
 async function getData() {
-    return TEMP_FIXTURE;
-    if (cache) return cache;
-    const response = await fetch('http://wiki.bertball.com/5e/Classes/Feats?raw');
-    return await response.text()
+    const {feats} = yaml.load(featsYml);
+    return feats;
+    // return TEMP_FIXTURE;
+    // if (cache) return cache;
+    // const response = await fetch('http://wiki.bertball.com/5e/Classes/Feats?raw');
+    // return await response.text()
 }
 
 
@@ -22,12 +27,12 @@ async function getAndParse() {
 }
 
 async function getAll() {
-    const data = await getAndParse();
+    const data = await getData();
     return data;
 }
 
 async function getOne(name) {
-    const data = await getAndParse();
+    const data = await getData();
     return data.find(d => d[1] === name);
 }
 

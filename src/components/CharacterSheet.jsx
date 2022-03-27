@@ -73,9 +73,9 @@ export default function CharacterSheet({ character }) {
                 <Modal isShown={isAddFeatModalShown} onClose={onCloseAddFeatModal} title="Add Feat">
                     <table>
                         <tbody>
-                            { feats.map(([,name,,desc]) => <tr key={name}>
+                            { feats.map(({ name, description }) => <tr key={name}>
                                 <th>{name}</th>
-                                <td>{desc}</td>
+                                <td>{description}</td>
                             </tr>)}
                         </tbody>
                     </table>

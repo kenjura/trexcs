@@ -76,14 +76,8 @@ skills:
     attribute: Dexterity
     points: 12
   - name: Athletics
-    attribute: Strength
-    points: 8
-  - name: Acrobatics
-    attribute: Dexterity
-    points: 12
-  - name: Athletics
     attribute: Constitution
-    points: 12
+    points: 8
   - name: Deception
     attribute: Charisma
     points: 
