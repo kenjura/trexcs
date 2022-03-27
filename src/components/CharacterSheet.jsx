@@ -1,5 +1,5 @@
+import Feat from './Feat';
 import Modal from './Modal';
-
 
 import './CharacterSheet.scss';
 
@@ -63,10 +63,8 @@ export default function CharacterSheet() {
             </section>
             <section>
                 <header>Feats</header>
-                <ul>
-                    <li>Dodge</li>
-                    <li>Aim</li>
-                </ul>
+                <Feat name="Dodge" />
+                <Feat name="Aim" />
                 <div>
                     <button onClick={onAddFeat}>add feat</button>
                 </div>
