@@ -4,10 +4,10 @@ import Tooltip from '../Tooltip';
 import { formatModifier } from '../../helper/formatModifier';
 import { useMemo } from 'react';
 
-export default function Skills({ attributes=[], skills=[], level }) {
+export default function Skills({ attributes=[], skills=[], level, title="Skills" }) {
     return (
         <section>
-            <header>Skills</header>
+            <header>{title}</header>
             <table>
                 <tbody>
                     {skills.map(skill => <Skill 

@@ -84,7 +84,8 @@ export default function CharacterSheet({ character }) {
         </div>
         <div className="grid-right">
             <AbilityScores attributes={character.attributes} level={character.level} />
-            <Skills attributes={character.attributes} skills={character.skills} level={character.level} />
+            <Skills attributes={character.attributes} skills={character.coreSkills} level={character.level} />
+            <Skills attributes={character.attributes} skills={character.skills} level={character.level} title="Core Skills" />
         </div>
 
 
